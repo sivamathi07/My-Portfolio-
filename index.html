@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sivamathi E - Portfolio</title>
+    <style>
+        body {
+            background-color: black;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+           
+        }
+
+        header {
+            color: white;
+            text-shadow: 0 0 15px maroon;
+            text-align: center;
+            padding: 2rem 0;
+            position: relative; 
+            animation: animate 6s;
+        }
+        @keyframes animate
+        {
+            10%,100%
+            {
+                width: 50%;
+            }
+            70%,90%
+            {
+                width: 100%;
+            }
+        }
+
+        .header-content h1 {
+            animation: animate 6s;
+            font-size: 2.5rem;
+        }
+        @keyframes animate
+        {
+            10%,100%
+            {
+                width: 50%;
+            }
+            70%,90%
+            {
+                width: 100%;
+            }
+        }
+
+        nav {
+            background-color: black;
+            color: black;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: aqua;
+        }
+        
+        .section-content {
+            background-color: pink ;
+            background-image: linear-gradient(rgba(0 0 0.5)yellow,gold);
+            padding: 2rem;
+            margin: 1rem;
+            border-radius: 20px;
+            transition: transform 0.5s;
+        }
+        .section-content:hover{
+             transform: translate(30px);
+         }
+
+        footer {
+            text-align: center;
+            padding: 1rem 0;
+            background-color: black;
+            color: #fff;
+        }
+        h2 {
+            color: black;
+            text-shadow: 0 0 3px aqua;
+        }
+        ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+        li {
+            margin: 10px 0;
+        }
+       .container{
+            text-align: center;
+       }
+       p{
+        margin: 0 20px;
+        line-height: 150%;
+       }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+           
+            <h1>Sivamathi E</h1>
+            <p> <b> Computer Science Student </b> </p>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#achievements">Achievements</a></li>
+        </ul>
+    </nav>
+
+    <section id="about">
+        <div class="section-content">
+            <h2>About Me</h2>
+            <p> <b>I'm Sivamathi E from Government Arts College(Autonomous),Karur.
+                <br> Currently I'm Studying Bsc Computer Science 3rd year. I will always look forward to learn new things.</b></p>
+        </div>
+    </section>
+
+<div class="container">
+    <button onclick="scrollToTop()"> <b>Go to list</b></button></div>
+
+    <section id="education">
+        <div class="section-content">
+            <h2>Education</h2>
+            <p> <b> 
+                <ul> <li>Bsc Computer Science (2021-2024)</li>
+                Government Arts College(Autonomous),Karur-639005. <br>
+                <li>HSC - 90% (2020-2021) </li>
+                 St.Theresas's Matric Hr.Sec.School.Karur-639003. <br>
+                <li>SSLC - 90% (2018-2019) </li>
+                 St.Theresas's Matric Hr.Sec.School.Karur-3 </ul></b></p>
+        </div>
+    </section>
+
+<div class="container"> 
+    <button onclick="scrollToTop()"> <b>Go to list</b> </button> </div>
+
+    <section id="skills">
+        <div class="section-content">
+            <h2>Skills</h2><b>
+            <ul>
+                <li>C</li>
+                <li>Mysql</li>
+                <li>Ms-office</li>
+                <li>Typewriting English and Tamil</li>
+            </ul> </b>
+        </div>
+    </section>
+
+<div class="container">
+    <button onclick="scrollToTop()"> <b>Go to list</b></button></div>
+
+    <section id="achievements">
+        <div class="section-content">
+            <h2>Achievements</h2>
+            <p> <b>
+                NPTEL-Programming in Java with 75% </b> </p>
+            
+        </div>
+    </section>
+    <div class="container">
+    <button onclick="scrollToTop()"> <b>Go to list</b></button> </div>
+
+    <footer>
+        <p>&copy; <b> <i>2023 Sivamathi E </i> </b> </p>
+    </footer>
+
+    <script>
+        //scroll to top
+        function scrollToTop(){
+            window.scrollTo(0,0);
+        }
+        // Smooth scrolling to section when clicking on navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
